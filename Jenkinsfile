@@ -22,7 +22,7 @@ pipeline {
         }
          stage('Emailvalidate') {
             steps {
-                sh emailfile.sh
+                sh emailvalidate.sh
             }
         }
     }
