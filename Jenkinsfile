@@ -23,7 +23,7 @@ pipeline {
          stage('Emailvalidate') {
             steps {
                 //sh emailvalidate.sh
-                sh authEmail=nagendra.ks@test.com 
+                sh export authEmail=nagendra.ks@test.com 
                 sh echo "$authEmail"
                 sh if [[ "$authEmail" =~ ^[a-zA-Z0-9_.+-]+@(([a-zA-Z0-9-]+\.)?[a-zA-Z]+\.)?test\.com$ ]]; then
                 sh echo "Proper Email detected $authEmail"
